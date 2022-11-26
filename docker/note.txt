@@ -22,3 +22,7 @@ api package : contains commands rest controllers and dtos
 domain package : contains accounts aggregates event store repos
 infrastructure package : command dispatcher, event producer , event sourcing handler and event store implementation
 
+why we need to specify persistent volumes for our kafka,mongoDB and mysql containers?
+    we configure docker volumes to ensure that the data of our containers are persisted to the host filesystem
+and outlives the lifetime of our containers. else we will lose the data every time that containers are recreated.
+
