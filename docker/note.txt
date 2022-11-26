@@ -26,3 +26,16 @@ why we need to specify persistent volumes for our kafka,mongoDB and mysql contai
     we configure docker volumes to ensure that the data of our containers are persisted to the host filesystem
 and outlives the lifetime of our containers. else we will lose the data every time that containers are recreated.
 
+there are 3 message types in cqrs
+    commands
+    events
+    queries
+
+what is command?
+    A command is a combination of expressed intent.
+    In other words it describes something that you want to be done.
+    It also contains the information required to undertake action based on that intent
+
+commands and events objects are known as message objects
+both require unique identifier
+
