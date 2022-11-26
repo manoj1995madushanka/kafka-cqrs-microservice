@@ -1,3 +1,6 @@
+docker -version
+
+
 docker network create --attachable -d bridge microservices
 docker network ls
 docker-compose --version
@@ -9,7 +12,7 @@ run mongoDB docker
 docker run -it -d --name mongo-container -p 27017:27017 --network microservice --restart always -v mongodb_data_container:/data/db mongo:latest
 
 run mysql in docker
-docker run -it -d --name mysql-container -p 3306:3306 --network microservice -e MYSQL_ROOT_PASSWORD = abc123 --restart always -v mysql_data_container:/var/lib/mysql mysql:latest
+docker run -it -d --name mysql-container -p 3306:3306 --network microservice -e MYSQL_ROOT_PASSWORD=abc123 --restart always -v mysql_data_container:/var/lib/mysql mysql:latest
 
 mysql client tool docker (Adminer)
 docker run -it -d --name adminer -p 8080:8080 --network microservice -e ADMINER_DEFAULT_SERVER = mysql-container --restart always adminer:latest
