@@ -1,0 +1,8 @@
+key considerations of event store
+
+    An event store must be an append only store, no update or delete operations should be allowed
+    Each event that is saved should represent the version or state of an aggregate at any given point in time
+    Events should be stored in chronological order, and new events should be appended to the previous event
+    The state of the aggregate should be repeatable by replaying the event store
+    Implement optimistic concurrency control
+

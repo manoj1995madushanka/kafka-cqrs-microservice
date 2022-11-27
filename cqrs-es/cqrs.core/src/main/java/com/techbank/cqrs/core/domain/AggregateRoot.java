@@ -10,6 +10,15 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/*
+* aggregate root maintains the list of uncommited changes in the form of events,
+* that needs to be applied to the aggregate and be persisted to the event store
+*
+* aggregate root is the entity within the aggregate that is responsible for keeping the aggregate in the consistent state
+*
+* manages which apply method is invoked on the aggregate based on the event type
+*
+* */
 public abstract class AggregateRoot {
 
     protected String id;
