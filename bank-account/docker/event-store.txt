@@ -5,4 +5,3 @@ key considerations of event store
     Events should be stored in chronological order, and new events should be appended to the previous event
     The state of the aggregate should be repeatable by replaying the event store
     Implement optimistic concurrency control
-
