@@ -1,0 +1,14 @@
+Domain Driven Design (DDD)
+• The term "domain-driven design" was coined by Eric Evans in 2003
+• An approach to structure and model software in a way that it matches the
+
+business domain
+• It places the primary focus of a software project on the core area of the business (the core domain)
+• Refers to problems as domains and aims to establish a common language to talk about these problems
+• Describes independent problem areas as Bounded Contexts
+
+Bounded Context
+    it is an independent problem area
+    describes a logical boundary within which a particular model is defined and applicable
+    each bounded context correlates to a microservice
+
