@@ -1,0 +1,7 @@
+kafka broker is a server running in a kafka cluster (container)
+brokers are stateless and relies on zookeeper
+zookeeper is responsible for manage cluster
+for reliability minimum 3 brokers needed
+
+topics are divide into partitions in a kafka cluster
+partitions are replicate around brokers
