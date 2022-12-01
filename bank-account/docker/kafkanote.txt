@@ -5,3 +5,6 @@ for reliability minimum 3 brokers needed
 
 topics are divide into partitions in a kafka cluster
 partitions are replicate around brokers
+
+a topic can be viewed as a channel though which event data is streamed,
+producers always send or produce messages to a topic, while consumers consume events from topics that they subscribe to.
