@@ -9,6 +9,9 @@ import org.springframework.stereotype.Service;
 @Service
 public class AccountEventProducer implements EventProducer {
 
+    /*
+    * kafka template that provide high level abstraction for sending messages to apache kafka
+    * */
     @Autowired
     private KafkaTemplate<String,Object> kafkaTemplate;
 
