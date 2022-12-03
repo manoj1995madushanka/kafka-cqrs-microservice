@@ -12,6 +12,8 @@ spring:
     username: root
     password: abc123
   kafka:
+    listener:
+      ack-mode: manual_immediate
     consumer:
       bootstrap-servers: localhost:9092
       group-id: bankaccConsumer
