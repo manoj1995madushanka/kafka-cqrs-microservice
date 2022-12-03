@@ -6,6 +6,7 @@ import com.techbank.account.common.events.AccountOpenedEvent;
 import com.techbank.account.common.events.FundsDepositedEvent;
 import com.techbank.account.common.events.FundsWithdrawnEvent;
 import com.techbank.cqrs.core.domain.AggregateRoot;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.Date;
@@ -27,21 +28,25 @@ public class AccountAggregate extends AggregateRoot {
         );
     }
 
-    public double getBalance(){
+    public double getBalance() {
         return this.balance;
     }
 
-    public void apply(AccountOpenedEvent event){
-        this.id=event.getId();
-        this.active=true;
-        this.balance=event.getOpeningBalance();
+    public boolean getActive() {
+        return this.active;
+    }
+
+    public void apply(AccountOpenedEvent event) {
+        this.id = event.getId();
+        this.active = true;
+        this.balance = event.getOpeningBalance();
     }
 
     public void depositFunds(double amount) {
         if (!this.active) {
             throw new IllegalStateException("Funds cannot be deposited into a closed account!");
         }
-        if(amount <= 0) {
+        if (amount <= 0) {
             throw new IllegalStateException("The deposit amount must be greater than 0!");
         }
         raiseEvent(FundsDepositedEvent.builder()
