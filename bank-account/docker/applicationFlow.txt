@@ -1,0 +1,6 @@
+postman request comes to openAccountController with account payload
+comes to handle method of AccountCommandHandler class
+AccountAggregate constructor called
+before saving sql data is saved to mongodb
+mongodb is a event store and sql is reading database
+
