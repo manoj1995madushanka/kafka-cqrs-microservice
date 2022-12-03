@@ -17,6 +17,13 @@ docker run -it -d --name mysql-container -p 3306:3306 --network microservice -e 
 mysql client tool docker (Adminer)
 docker run -it -d --name adminer -p 8080:8080 --network microservice -e ADMINER_DEFAULT_SERVER = mysql-container --restart always adminer:latest
 
+run postgres in docker
+docker run -d --name postgres-container -p 5432:5432 --network microservice -e POSTGRES_PASSWORD=abc123 --restart always -v postgres_data:/var/lib/postgressql/data postgres:latest
+
+tool for view postgres db
+pgAdmin
+
+in postgres we need to create database first it is not create db automatically like mysql
 
 api package : contains commands rest controllers and dtos
 domain package : contains accounts aggregates event store repos
