@@ -1,6 +1,7 @@
 package com.techbank.account.query.domain;
 
 import com.techbank.account.common.dto.AccountType;
+import com.techbank.cqrs.core.domain.BaseEntity;
 import com.techbank.cqrs.core.events.BaseEvent;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -16,7 +17,7 @@ import java.util.Date;
 @AllArgsConstructor
 @Builder
 @Entity
-public class BankAccount extends BaseEvent {
+public class BankAccount extends BaseEntity {
     @Id
     private String id;
     private String accountHolder;
